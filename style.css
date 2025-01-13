@@ -1,0 +1,257 @@
+/* General Reset and Global Font Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+/* Body Centering and Background Styling */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #e0e0e0;
+  min-height: 100vh;
+}
+
+/* Signup Container Styling */
+.signup-container {
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 24px 32px;
+  width: 360px;
+  border: 1.5px solid White;
+  background: #fff;
+}
+
+/* Header Title with Gradient Text */
+h1 {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 550;
+  margin-bottom: 32px;
+  background: linear-gradient(45deg, #4a5aff, #ff5c5c);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* Form Group Layout and Input Styling */
+.form-group {
+  position: relative;
+  width: 100%;
+  margin-bottom: 32px;
+}
+
+.form-group input {
+  width: 100%;
+  font-size: 16px;
+  padding: 12px;
+  border: 1.5px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  background: transparent;
+  transition: 0.3s ease;
+}
+
+.form-group label {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 15px;
+  left: 8px;
+  color: #333;
+  transition: 0.3s ease;
+  background-color: transparent;
+  padding: 0 4px;
+  pointer-events: none;
+}
+
+.form-group input:focus {
+  border-color: #06f;
+}
+
+.form-group input:focus ~ label {
+  color: #06f;
+}
+.form-group input:focus ~ label,
+.form-group input.has-content ~ label {
+  top: 0;
+  font-size: 14px;
+  background-color: #fff;
+  padding: 0 4px;
+}
+
+/* Error Message Visibility and Input Error Styling */
+.error-message {
+  position: absolute;
+  bottom: -18px;
+  left: 12px;
+  color: #fc5454;
+  font-size: 12px;
+  display: none;
+}
+
+input.error ~ .error-message {
+  display: block;
+}
+
+input.error {
+  border-color: #fc5454;
+}
+
+/* Password Visibility Icon Styles */
+.password-visibility {
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.password-visibility svg {
+  box-sizing: content-box;
+  padding: 5px;
+  color: #555;
+}
+
+#showIcon {
+  display: none;
+}
+
+#hideIcon {
+  display: block;
+}
+
+/* Primary Button Styling */
+.btn-primary {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  padding: 12px 16px;
+  border-radius: 4px;
+  background: #08f;
+  color: #fff;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #07f;
+}
+
+/* Divider Between Form Sections */
+.or-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 24px 0px;
+}
+
+.or-divider::before,
+.or-divider::after {
+  content: "";
+  flex: 1;
+  background-color: #999;
+  height: 1px;
+}
+
+.or-divider span {
+  color: #333;
+  padding: 0px 8px;
+  font-size: 15px;
+}
+
+/* Social Buttons Layout and Style */
+.social-buttons {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.btn-secondary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  background: transparent;
+  padding: 10px 12px;
+  border: 1.5px solid #ccc;
+  border-radius: 50px;
+  outline: none;
+  cursor: pointer;
+}
+
+.btn-secondary img {
+  margin-right: 5px;
+}
+
+.btn-secondary:hover {
+  background-color: #07f;
+  border-color: #07f;
+  color: #fff;
+}
+
+/* Login Link Styling */
+.login-link {
+  text-align: center;
+  margin-bottom: 24px;
+  font-size: 15px;
+  color: #333;
+}
+
+.login-link a {
+  text-decoration: none;
+  margin-left: 4px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #06f;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+.login-link a:visited {
+  color: #06f;
+}
+
+.signup-footer {
+  text-align: center;
+  font-size: 14px;
+}
+
+.signup-footer .link {
+  text-decoration: none;
+  color: #06f;
+  margin: 0 8px;
+}
+
+.signup-footer .link:hover {
+  text-decoration: underline;
+}
+
+.signup-footer .divider {
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 8px 0;
+    width: 100vw;
+    background-color: #fff;
+  }
+
+  .signup-container {
+    box-shadow: none;
+  }
+}
